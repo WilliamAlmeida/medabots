@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://medabots/flyer/wonder_angel/wonder_angel_legs.tscn" type="PackedScene" id=1]
 [ext_resource path="res://medabots/flyer/wonder_angel/wonder_angel_head.tscn" type="PackedScene" id=2]
@@ -31,6 +31,10 @@
 [ext_resource path="res://medabots/spider/megaphant/megaphant_arm_r.tscn" type="PackedScene" id=29]
 [ext_resource path="res://medabots/spider/megaphant/megaphant_arm_l.tscn" type="PackedScene" id=30]
 [ext_resource path="res://medabots/spider/megaphant/megaphant_head.tscn" type="PackedScene" id=31]
+[ext_resource path="res://medabots/humanoids/cyandog/cyandog_arm_r.tscn" type="PackedScene" id=32]
+[ext_resource path="res://medabots/humanoids/cyandog/cyandog_arm_l.tscn" type="PackedScene" id=33]
+[ext_resource path="res://medabots/humanoids/cyandog/cyandog_head.tscn" type="PackedScene" id=34]
+[ext_resource path="res://medabots/humanoids/cyandog/cyandog_legs.tscn" type="PackedScene" id=35]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32.1781, 20.7568 )
@@ -63,7 +67,7 @@ visible = false
 shape = SubResource( 2 )
 
 [node name="tinpet_angel" type="Node2D" parent="."]
-position = Vector2( 0, 44 )
+position = Vector2( -38, -16 )
 script = ExtResource( 11 )
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_angel"]
@@ -87,6 +91,7 @@ position = Vector2( -6, -6 )
 [node name="tinpet_metabee" type="Node2D" parent="."]
 position = Vector2( -74, 60 )
 script = ExtResource( 11 )
+control = true
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_metabee"]
 position = Vector2( 6, -6 )
@@ -128,8 +133,30 @@ position = Vector2( -6, -6 )
 
 [node name="samurai_arm_l" parent="tinpet_samurai/pivot_arm_l" instance=ExtResource( 6 )]
 
+[node name="tinpet_cyandog" type="Node2D" parent="."]
+position = Vector2( -24, 56 )
+script = ExtResource( 11 )
+
+[node name="pivot_arm_r" type="Position2D" parent="tinpet_cyandog"]
+position = Vector2( 6, -6 )
+
+[node name="cyandog_arm_r" parent="tinpet_cyandog/pivot_arm_r" instance=ExtResource( 32 )]
+
+[node name="pivot_legs" type="Position2D" parent="tinpet_cyandog"]
+
+[node name="cyandog_legs" parent="tinpet_cyandog/pivot_legs" instance=ExtResource( 35 )]
+
+[node name="pivot_head" type="Position2D" parent="tinpet_cyandog"]
+
+[node name="cyandog_head" parent="tinpet_cyandog/pivot_head" instance=ExtResource( 34 )]
+
+[node name="pivot_arm_l" type="Position2D" parent="tinpet_cyandog"]
+position = Vector2( -6, -6 )
+
+[node name="cyandog_arm_l" parent="tinpet_cyandog/pivot_arm_l" instance=ExtResource( 33 )]
+
 [node name="tinpet_draken" type="Node2D" parent="."]
-position = Vector2( 69, 38 )
+position = Vector2( -191, -11 )
 script = ExtResource( 11 )
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_draken"]
@@ -151,7 +178,7 @@ position = Vector2( -6, -6 )
 [node name="draken_arm_l" parent="tinpet_draken/pivot_arm_l" instance=ExtResource( 10 )]
 
 [node name="tinpet_noctobat" type="Node2D" parent="."]
-position = Vector2( -40, -4 )
+position = Vector2( -117, -2 )
 script = ExtResource( 11 )
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_noctobat"]
@@ -175,7 +202,6 @@ position = Vector2( -6, -6 )
 [node name="tinpet_digmole" type="Node2D" parent="."]
 position = Vector2( -199, 65 )
 script = ExtResource( 11 )
-control = true
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_digmole"]
 position = Vector2( 6, -6 )

@@ -1,11 +1,12 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://medabots/flyer/wonder_angel/medabots_wonder_angel_arm_r.png" type="Texture" id=1]
+[ext_resource path="res://medabots/humanoids/cyandog/cyandog_chest.png" type="Texture" id=1]
+[ext_resource path="res://medabots/humanoids/cyandog/cyandog_head.png" type="Texture" id=2]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("arm:position")
+tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -14,10 +15,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, -14 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("arm:rotation_degrees")
+tracks/1/path = NodePath("head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -29,7 +30,7 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("hand:position")
+tracks/2/path = NodePath("chest:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -38,10 +39,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 4, 9 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("hand:rotation_degrees")
+tracks/3/path = NodePath("chest:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -51,65 +52,13 @@ tracks/3/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0.0 ]
-}
-
-[sub_resource type="Animation" id=5]
-resource_name = "atk_arm_r"
-length = 2.0
-tracks/0/type = "value"
-tracks/0/path = NodePath("arm:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ Vector2( 0, 0 ) ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("arm:rotation_degrees")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0, 0.5, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -55.0, -55.0, 0.0 ]
-}
-tracks/2/type = "value"
-tracks/2/path = NodePath("hand:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ Vector2( 4, 9 ), Vector2( 10, 1 ), Vector2( 10, 1 ), Vector2( 10, 1 ), Vector2( 4, 9 ) ]
-}
-tracks/3/type = "value"
-tracks/3/path = NodePath("hand:rotation_degrees")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/keys = {
-"times": PoolRealArray( 0, 0.5, 1, 1.5, 2 ),
-"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
-"update": 0,
-"values": [ 0.0, -45.0, -68.0493, -45.0, 0.0 ]
 }
 
 [sub_resource type="Animation" id=3]
 resource_name = "default"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("arm:position")
+tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -118,10 +67,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ) ]
+"values": [ Vector2( 0, -14 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("arm:rotation_degrees")
+tracks/1/path = NodePath("head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -133,7 +82,7 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("hand:position")
+tracks/2/path = NodePath("chest:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -142,10 +91,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Vector2( 4, 9 ) ]
+"values": [ Vector2( 0, 0 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("hand:rotation_degrees")
+tracks/3/path = NodePath("chest:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -161,7 +110,7 @@ tracks/3/keys = {
 resource_name = "idle"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("arm:position")
+tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -170,10 +119,10 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 0, 0 ), Vector2( 0, -2 ) ]
+"values": [ Vector2( 0, -14 ), Vector2( 0, -16 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("arm:rotation_degrees")
+tracks/1/path = NodePath("head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -185,7 +134,7 @@ tracks/1/keys = {
 "values": [ 0.0 ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath("hand:position")
+tracks/2/path = NodePath("chest:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
@@ -194,10 +143,10 @@ tracks/2/keys = {
 "times": PoolRealArray( 0, 0.5 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ Vector2( 4, 9 ), Vector2( 5, 7 ) ]
+"values": [ Vector2( 0, 0 ), Vector2( 0, -2 ) ]
 }
 tracks/3/type = "value"
-tracks/3/path = NodePath("hand:rotation_degrees")
+tracks/3/path = NodePath("chest:rotation_degrees")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/imported = false
@@ -209,24 +158,18 @@ tracks/3/keys = {
 "values": [ 0.0 ]
 }
 
-[node name="wonder_angel_arm_r" type="Node2D"]
+[node name="cyandog_head" type="Node2D"]
 
-[node name="arm" type="Sprite" parent="."]
+[node name="chest" type="Sprite" parent="."]
 texture = ExtResource( 1 )
-offset = Vector2( 7, -5 )
-hframes = 2
-vframes = 2
+offset = Vector2( -1, -7 )
 
-[node name="hand" type="Sprite" parent="."]
-position = Vector2( 4, 8 )
-texture = ExtResource( 1 )
-offset = Vector2( 6, 7 )
-hframes = 2
-vframes = 2
-frame = 1
+[node name="head" type="Sprite" parent="."]
+position = Vector2( 0, -14 )
+texture = ExtResource( 2 )
+offset = Vector2( 0, -11 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/RESET = SubResource( 2 )
-anims/atk_arm_r = SubResource( 5 )
 anims/default = SubResource( 3 )
 anims/idle = SubResource( 4 )

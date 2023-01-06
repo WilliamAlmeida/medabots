@@ -5,7 +5,7 @@
 [sub_resource type="Animation" id=2]
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -17,7 +17,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/path = NodePath("head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -33,7 +33,7 @@ tracks/1/keys = {
 resource_name = "default"
 length = 0.001
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -45,7 +45,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/path = NodePath("head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -61,7 +61,7 @@ tracks/1/keys = {
 resource_name = "idle"
 loop = true
 tracks/0/type = "value"
-tracks/0/path = NodePath("Sprite:position")
+tracks/0/path = NodePath("head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/imported = false
@@ -73,7 +73,7 @@ tracks/0/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, -2 ) ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:rotation_degrees")
+tracks/1/path = NodePath("head:rotation_degrees")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
@@ -87,7 +87,7 @@ tracks/1/keys = {
 
 [node name="megaphant_head" type="Node2D"]
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="head" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 offset = Vector2( -2, -14 )
 

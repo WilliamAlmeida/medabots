@@ -1,6 +1,6 @@
 extends Node2D
 
-enum states {idle, atk_head, atk_arm_l, atk_arm_r}
+enum states {idle, walk, atk_head, atk_arm_l, atk_arm_r}
 
 export(states) var state = states.idle
 
@@ -11,6 +11,9 @@ var obj_arm_l
 
 var cur_animation = null
 export var control : bool = false
+export var speed_move = 3
+
+var on_walk : bool = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -31,6 +34,8 @@ func _process(delta):
 	match state:
 		states.idle:
 			animation = "idle"
+		states.walk:
+			animation = "walk"
 		states.atk_head:
 			animation = "atk_head"
 		states.atk_arm_l:
@@ -74,6 +79,25 @@ func _process(delta):
 				else:
 					obj_legs.get_node("AnimationPlayer").play("default")
 
+	if control:
+		var move_direction = Vector2.ZERO
+
+		if Input.is_action_pressed("ui_up"):
+			move_direction.y = -1
+		elif Input.is_action_pressed("ui_down"):
+			move_direction.y = 1
+
+		if Input.is_action_pressed("ui_left"):
+			move_direction.x = -1
+		elif Input.is_action_pressed("ui_right"):
+			move_direction.x = 1
+
+		if move_direction != Vector2.ZERO:
+			state = states.walk
+			self.global_position += move_direction * speed_move
+		else:
+			state = states.idle
+	
 	if Input.is_action_just_pressed("atk_head"):
 		state = states.atk_head
 	elif Input.is_action_just_pressed("atk_arm_l"):
@@ -82,15 +106,4 @@ func _process(delta):
 		state = states.atk_arm_r
 	elif Input.is_action_just_pressed("ui_cancel"):
 		state = states.idle
-
-	if control:
-		if Input.is_action_pressed("ui_up"):
-			self.global_position.y -= 1
-		elif Input.is_action_pressed("ui_down"):
-			self.global_position.y += 1
-
-		if Input.is_action_pressed("ui_left"):
-			self.global_position.x -= 1
-		elif Input.is_action_pressed("ui_right"):
-			self.global_position.x += 1
 #	pass
