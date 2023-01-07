@@ -82,11 +82,18 @@ func _process(delta):
 	if control:
 		var move_direction = Vector2.ZERO
 
+		# var tween = get_node("Tween")
+
 		if Input.is_action_pressed("ui_up"):
 			move_direction.y = -1
+			# tween.interpolate_property(self, "global_position", self.global_position, self.global_position + Vector2(0, -32), 0.25, 8, 2)
+			# tween.start()
 		elif Input.is_action_pressed("ui_down"):
 			move_direction.y = 1
+			# tween.interpolate_property(self, "global_position", self.global_position, self.global_position + Vector2(0, 32), 0.25, 8, 2)
+			# tween.start()
 
+		#if not tween.is_active():
 		if Input.is_action_pressed("ui_left"):
 			move_direction.x = -1
 		elif Input.is_action_pressed("ui_right"):
