@@ -4,16 +4,16 @@ enum states {idle, walk, atk_head, atk_arm_l, atk_arm_r}
 
 export(states) var state = states.idle
 
+var cur_animation = null
+var on_walk : bool = false
+
 var obj_arm_r
 var obj_legs
 var obj_head
 var obj_arm_l
 
-var cur_animation = null
 export var control : bool = false
-export var speed_move = 3
-
-var on_walk : bool = false
+export var speed_move = 1.5
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

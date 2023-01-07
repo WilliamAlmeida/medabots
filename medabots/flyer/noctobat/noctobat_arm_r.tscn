@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://medabots/flyer/noctobat/medabots_noctobat_arm_r.png" type="Texture" id=1]
+[ext_resource path="res://medabots/flyer/noctobat/sprites/medabots_noctobat_arm_r.png" type="Texture" id=1]
 
 [sub_resource type="Animation" id=2]
 length = 0.001

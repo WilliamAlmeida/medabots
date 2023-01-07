@@ -46,7 +46,6 @@ extents = Vector2( 32.1781, 20.7568 )
 [node name="World" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, 60 )
 current = true
 script = ExtResource( 12 )
 __meta__ = {
@@ -59,7 +58,8 @@ __meta__ = {
 position = Vector2( 0, 95 )
 scale = Vector2( 27.9, 0.3 )
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_lock_": true
 }
 
 [node name="Sprite" type="Sprite" parent="Floor"]
@@ -73,8 +73,11 @@ shape = SubResource( 2 )
 [node name="Tween" type="Tween" parent="."]
 
 [node name="tinpet_angel" type="Node2D" parent="."]
-position = Vector2( -38, -16 )
+position = Vector2( 71, -57 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_angel"]
 position = Vector2( 6, -6 )
@@ -94,75 +97,12 @@ position = Vector2( -6, -6 )
 
 [node name="wonder_angel_arm_l" parent="tinpet_angel/pivot_arm_l" instance=ExtResource( 3 )]
 
-[node name="tinpet_metabee" type="Node2D" parent="."]
-position = Vector2( -74, 60 )
-script = ExtResource( 11 )
-
-[node name="pivot_arm_r" type="Position2D" parent="tinpet_metabee"]
-position = Vector2( 6, -6 )
-
-[node name="metabee_arm_r" parent="tinpet_metabee/pivot_arm_r" instance=ExtResource( 14 )]
-
-[node name="pivot_legs" type="Position2D" parent="tinpet_metabee"]
-
-[node name="metabee_legs" parent="tinpet_metabee/pivot_legs" instance=ExtResource( 17 )]
-
-[node name="pivot_head" type="Position2D" parent="tinpet_metabee"]
-
-[node name="metabee_head" parent="tinpet_metabee/pivot_head" instance=ExtResource( 15 )]
-
-[node name="pivot_arm_l" type="Position2D" parent="tinpet_metabee"]
-position = Vector2( -6, -6 )
-
-[node name="metabee_arm_l" parent="tinpet_metabee/pivot_arm_l" instance=ExtResource( 16 )]
-
-[node name="tinpet_cyandog" type="Node2D" parent="."]
-position = Vector2( 17, 56 )
-script = ExtResource( 11 )
-
-[node name="pivot_arm_r" type="Position2D" parent="tinpet_cyandog"]
-position = Vector2( 6, -6 )
-
-[node name="cyandog_arm_r" parent="tinpet_cyandog/pivot_arm_r" instance=ExtResource( 32 )]
-
-[node name="pivot_legs" type="Position2D" parent="tinpet_cyandog"]
-
-[node name="cyandog_legs" parent="tinpet_cyandog/pivot_legs" instance=ExtResource( 35 )]
-
-[node name="pivot_head" type="Position2D" parent="tinpet_cyandog"]
-
-[node name="cyandog_head" parent="tinpet_cyandog/pivot_head" instance=ExtResource( 34 )]
-
-[node name="pivot_arm_l" type="Position2D" parent="tinpet_cyandog"]
-position = Vector2( -6, -6 )
-
-[node name="cyandog_arm_l" parent="tinpet_cyandog/pivot_arm_l" instance=ExtResource( 33 )]
-
-[node name="tinpet_samurai" type="Node2D" parent="."]
-position = Vector2( -143, 58 )
-script = ExtResource( 11 )
-
-[node name="pivot_arm_r" type="Position2D" parent="tinpet_samurai"]
-position = Vector2( 6, -6 )
-
-[node name="samurai_arm_r" parent="tinpet_samurai/pivot_arm_r" instance=ExtResource( 21 )]
-
-[node name="pivot_legs" type="Position2D" parent="tinpet_samurai"]
-
-[node name="samurai_legs" parent="tinpet_samurai/pivot_legs" instance=ExtResource( 19 )]
-
-[node name="pivot_head" type="Position2D" parent="tinpet_samurai"]
-
-[node name="samurai_head" parent="tinpet_samurai/pivot_head" instance=ExtResource( 18 )]
-
-[node name="pivot_arm_l" type="Position2D" parent="tinpet_samurai"]
-position = Vector2( -6, -6 )
-
-[node name="samurai_arm_l" parent="tinpet_samurai/pivot_arm_l" instance=ExtResource( 6 )]
-
 [node name="tinpet_draken" type="Node2D" parent="."]
-position = Vector2( -191, -11 )
+position = Vector2( -74, -59 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_draken"]
 position = Vector2( 6, -6 )
@@ -183,8 +123,11 @@ position = Vector2( -6, -6 )
 [node name="draken_arm_l" parent="tinpet_draken/pivot_arm_l" instance=ExtResource( 10 )]
 
 [node name="tinpet_noctobat" type="Node2D" parent="."]
-position = Vector2( -117, -2 )
+position = Vector2( 0, -50 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_noctobat"]
 position = Vector2( 6, -6 )
@@ -204,9 +147,87 @@ position = Vector2( -6, -6 )
 
 [node name="noctobat_arm_l" parent="tinpet_noctobat/pivot_arm_l" instance=ExtResource( 23 )]
 
-[node name="tinpet_digmole" type="Node2D" parent="."]
-position = Vector2( -199, 65 )
+[node name="tinpet_metabee" type="Node2D" parent="."]
+position = Vector2( 107, 55 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pivot_arm_r" type="Position2D" parent="tinpet_metabee"]
+position = Vector2( 6, -6 )
+
+[node name="metabee_arm_r" parent="tinpet_metabee/pivot_arm_r" instance=ExtResource( 14 )]
+
+[node name="pivot_legs" type="Position2D" parent="tinpet_metabee"]
+
+[node name="metabee_legs" parent="tinpet_metabee/pivot_legs" instance=ExtResource( 17 )]
+
+[node name="pivot_head" type="Position2D" parent="tinpet_metabee"]
+
+[node name="metabee_head" parent="tinpet_metabee/pivot_head" instance=ExtResource( 15 )]
+
+[node name="pivot_arm_l" type="Position2D" parent="tinpet_metabee"]
+position = Vector2( -6, -6 )
+
+[node name="metabee_arm_l" parent="tinpet_metabee/pivot_arm_l" instance=ExtResource( 16 )]
+
+[node name="tinpet_cyandog" type="Node2D" parent="."]
+position = Vector2( 169, 53 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pivot_arm_r" type="Position2D" parent="tinpet_cyandog"]
+position = Vector2( 6, -6 )
+
+[node name="cyandog_arm_r" parent="tinpet_cyandog/pivot_arm_r" instance=ExtResource( 32 )]
+
+[node name="pivot_legs" type="Position2D" parent="tinpet_cyandog"]
+
+[node name="cyandog_legs" parent="tinpet_cyandog/pivot_legs" instance=ExtResource( 35 )]
+
+[node name="pivot_head" type="Position2D" parent="tinpet_cyandog"]
+
+[node name="cyandog_head" parent="tinpet_cyandog/pivot_head" instance=ExtResource( 34 )]
+
+[node name="pivot_arm_l" type="Position2D" parent="tinpet_cyandog"]
+position = Vector2( -6, -6 )
+
+[node name="cyandog_arm_l" parent="tinpet_cyandog/pivot_arm_l" instance=ExtResource( 33 )]
+
+[node name="tinpet_samurai" type="Node2D" parent="."]
+position = Vector2( 43, 53 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pivot_arm_r" type="Position2D" parent="tinpet_samurai"]
+position = Vector2( 6, -6 )
+
+[node name="samurai_arm_r" parent="tinpet_samurai/pivot_arm_r" instance=ExtResource( 21 )]
+
+[node name="pivot_legs" type="Position2D" parent="tinpet_samurai"]
+
+[node name="samurai_legs" parent="tinpet_samurai/pivot_legs" instance=ExtResource( 19 )]
+
+[node name="pivot_head" type="Position2D" parent="tinpet_samurai"]
+
+[node name="samurai_head" parent="tinpet_samurai/pivot_head" instance=ExtResource( 18 )]
+
+[node name="pivot_arm_l" type="Position2D" parent="tinpet_samurai"]
+position = Vector2( -6, -6 )
+
+[node name="samurai_arm_l" parent="tinpet_samurai/pivot_arm_l" instance=ExtResource( 6 )]
+
+[node name="tinpet_digmole" type="Node2D" parent="."]
+position = Vector2( -43, 62 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_digmole"]
 position = Vector2( 6, -6 )
@@ -227,8 +248,11 @@ position = Vector2( -6, -6 )
 [node name="digmole_arm_l" parent="tinpet_digmole/pivot_arm_l" instance=ExtResource( 27 )]
 
 [node name="tinpet_megaphant" type="Node2D" parent="."]
-position = Vector2( -260, 64 )
+position = Vector2( -108, 61 )
 script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_megaphant"]
 position = Vector2( 6, -6 )
@@ -249,9 +273,11 @@ position = Vector2( -6, -6 )
 [node name="megaphant_arm_l" parent="tinpet_megaphant/pivot_arm_l" instance=ExtResource( 30 )]
 
 [node name="tinpet_tankar" type="Node2D" parent="."]
-position = Vector2( -30, 65 )
+position = Vector2( -168, 64 )
 script = ExtResource( 11 )
-control = true
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="pivot_arm_r" type="Position2D" parent="tinpet_tankar"]
 position = Vector2( 6, -6 )

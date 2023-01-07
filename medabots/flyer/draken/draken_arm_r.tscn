@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://medabots/flyer/draken/medabots_draken_arm_r.png" type="Texture" id=1]
+[ext_resource path="res://medabots/flyer/draken/sprites/medabots_draken_arm_r.png" type="Texture" id=1]
 
 [sub_resource type="Animation" id=1]
 length = 0.001

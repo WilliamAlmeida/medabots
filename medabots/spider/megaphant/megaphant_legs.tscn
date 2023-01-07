@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://medabots/spider/megaphant/megaphant_legs.png" type="Texture" id=1]
+[ext_resource path="res://medabots/spider/megaphant/sprites/megaphant_legs.png" type="Texture" id=1]
 
 [sub_resource type="Animation" id=2]
 length = 0.001
